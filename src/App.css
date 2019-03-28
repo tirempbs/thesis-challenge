@@ -2,11 +2,6 @@
 text-align: center;
 }
 
-@media.ui.container {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
 
 .topSlash {
 overflow:hidden;
