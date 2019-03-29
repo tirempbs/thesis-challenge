@@ -5,14 +5,14 @@ import Nav from './Nav';
 import Content from './Content';
 
 class App extends Component {
-  render() {
-    return (
-      <Container className='topSlash' fluid >
-        <Nav />
-        <Content />
-      </Container>
-    );
-  }
+    render() {
+        return (
+            <Container className='topSlash' fluid>
+                <Nav />
+                <Content />
+            </Container>
+        );
+    }
 }
 
 export default App;
