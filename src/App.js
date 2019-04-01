@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import './AppDesktop.css';
+import './AppMobile.css';
 import { Container, Responsive } from 'semantic-ui-react';
 import Nav from './Nav';
 import Content from './Content';
 import Tiles from './Tiles';
 import CallToAction from './CallToAction';
+import Footer from './Footer';
 
 class App extends Component {
     render() {
@@ -15,11 +17,15 @@ class App extends Component {
                         <Nav />
                         <Content />
                     </Container>
-                    <Container className='desktopBottomSlash' fluid>
+                    <Container className='desktopBottomSlashGray' fluid>
                         <Tiles />
                         <CallToAction />
                     </Container>
+                    <Container className='desktopBottomSlashPurple' fluid>
+                        <Footer />
+                    </Container>
                 </Responsive>
+
                 <Responsive as={Container} {...Responsive.onlyMobile}>
                     <Container className='mobileTopSlash' fluid>
                         <Nav />
@@ -28,6 +34,7 @@ class App extends Component {
                     <Container className='mobileBottomSlash' fluid>
                         <Tiles />
                         <CallToAction />
+                        <Footer />
                     </Container>
                 </Responsive>
             </>

@@ -1,0 +1,94 @@
+@media only screen and (max-width: 767px) {
+    .ui.container {
+        margin-left: 0em!important;
+        margin-right: 0em!important;
+    }
+}
+
+.mobileTopSlash {
+    overflow: visible;
+    height: 90vh;
+    background:
+        linear-gradient(170deg, #7631D5 15%, transparent 15%),
+        linear-gradient(170deg, #7448D7 50%, transparent 50%),
+        linear-gradient(170deg, #746FDF 75%, transparent 75%)
+}
+
+.mobileBottomSlash {
+    overflow: visible;
+    height: 240vh;
+    background:
+        linear-gradient(0deg, #726FDF 35%, transparent 35%),
+        linear-gradient(-10deg, #F6F9FC 55%, transparent 55%)
+}
+
+i.bars.icon {
+    margin: 1.75em;
+}
+
+.mobileHeaderText {
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+.mobileInput {
+    width: 80vw;
+    height: 7vh;
+    margin: 1em;
+}
+
+.mobileMidText {
+    color: white;
+    font-size: 1em;
+    margin: 6em;
+}
+
+div.ui.container.mobileLatinText {
+    color: #767583;
+    width: 80vw;
+    margin: 10vw;
+}
+
+.mobileTileHeader {
+    color: black;
+    font-size: 2em;
+    margin-top: 15vh;
+}
+
+div.ui.cards.mobileCards {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+div.ui.card.mobileBottomSlashCard{
+    width: auto;
+    margin-top:10vh;
+    margin-bottom: 10vh;
+    background: transparent;
+    box-shadow: none;
+}
+
+.mobileReadyText {
+    color: #746FDF;
+    font-size: 1.5em;
+}
+
+.mobileContactText {
+    color: #7631D5;
+    font-size: 1.5em;
+}
+
+div.ui.card.mobileFooterCard{
+    width: 100vw;
+    background: transparent;
+    box-shadow: none;
+}
+
+.mobileFooterText {
+    color: white;
+    font-size: 1em;
+    line-height: 1.5em;
+}

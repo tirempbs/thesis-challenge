@@ -1,0 +1,177 @@
+div.ui.container {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div.ui.secondary.menu {
+    background: transparent;
+    box-shadow: none;
+    margin: 0vw 10vw 1vw 10vw;
+    padding-top: 2vw;
+}
+
+div.ui.container.desktopContent {
+    margin-top: 12vh;
+}
+
+button.ui.button {
+    color: white;
+    background-color: #81D398;
+}
+
+.ui.button.purpleButton {
+    color: white;
+    background-color: #726FDF;
+    box-shadow: 2px 6px 10px lightgray;
+    margin-left: 1.5vw;
+}
+
+.ui.button.contactButton {
+    color: gray;
+    background-color: white;
+    box-shadow: 2px 6px 10px lightgray;
+    margin-left: 1.5vw;
+}
+
+.mint {
+    color: #81D398;
+}
+
+.arrowIcon {
+    color: white;
+    background-color: #81D398;
+    border: transparent;
+}
+
+div.ui.divider:not(.vertical):not(.horizontal) {
+    border-top: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 5vw;
+}
+
+img.ui.small.left.floated.image {
+    margin-left: -14px;
+}
+
+.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+    background: #FCFCFD;
+}
+
+.desktopTopSlash {
+    overflow: visible;
+    margin-bottom: 40vh;
+    height: 100vh;
+    background:
+        linear-gradient(170deg, #7631D5 14%, transparent 14%),
+        linear-gradient(170deg, #7448D7 50%, transparent 50%),
+        linear-gradient(170deg, #746FDF 64%, transparent 64%)
+}
+
+.desktopBottomSlashGray {
+    overflow: visible;
+    height: 85vh;
+    background:
+        linear-gradient(-10deg, #F6F9FC 50%, transparent 50%)
+}
+
+.desktopBottomSlashPurple {
+    overflow: visible;
+    height: 30vh;
+    background:
+        linear-gradient(0deg, #726FDF 100%, transparent 100%)
+}
+
+.desktopHeaderText {
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: .5em;
+}
+
+.desktopInput {
+    width: 35vw;
+    height: 7vh;
+    margin: 1vw;
+}
+
+.desktopMidText {
+    color: white;
+    font-size: 1em;
+    margin-top: 16vh;
+    margin-bottom: 2vh;
+}
+
+div.ui.container.desktopLatinText {
+    color: #767583;
+    width: 45vw;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+.desktopTileHeader {
+    color: black;
+    font-size: 2em;
+    margin-top: -15vh;
+}
+
+div.ui.cards.desktopCards {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+}
+
+div.ui.card.desktopCard{
+    width: 38vw;
+}
+
+div.ui.card.desktopBottomSlashCard{
+    width: 38.8vw;
+    margin-top:8vh;
+    background: transparent;
+    box-shadow: none;
+}
+
+div.ui.container.desktopReadyText {
+    color: #746FDF;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+div.ui.container.desktopContactText {
+    color: #7631D5;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+div.ui.card.desktopFooterCard{
+    width: 18vw;
+    margin-top:8vh;
+    background: transparent;
+    box-shadow: none;
+}
+
+.desktopFooterText {
+    color: white;
+    font-size: .8em;
+    line-height: 2em;
+}
+
+.desktopFooterAddress {
+    margin-left: 2.5vw;
+}
+
+.desktopFooterIcons {
+    color: #5451A3;
+    line-height: 5vh;
+}
+

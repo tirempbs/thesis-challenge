@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './AppDesktop.css';
+import './AppMobile.css';
 import { Responsive, Card, Container, Button } from 'semantic-ui-react';
 
 class CallToAction extends Component {
@@ -23,17 +24,17 @@ class CallToAction extends Component {
                     </Card>
                 </Responsive>
 
-                <Responsive {...Responsive.onlyMobile} centered>
+                <Responsive {...Responsive.onlyMobile}>
                     <Card className='mobileBottomSlashCard'>
-                        <Container className='mobileReadyText'>
+                        <Container className='mobileReadyText' textAlign='center'>
                             Are you ready?
                         </Container>
-                        <Container className='mobileContactText'>
+                        <Container className='mobileContactText' textAlign='center'>
                             create an account, or contact us.
                         </Container>
                     </Card>
                     <Card className='mobileBottomSlashCard'>
-                        <Container>
+                        <Container textAlign='center'>
                             <Button className='purpleButton' content='CREATE YOUR ACCOUNT' />
                             <Button className='contactButton' content='CONTACT US' />
                         </Container>
