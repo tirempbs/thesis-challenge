@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './AppDesktop.css';
+import './AppMobile.css';
 import { Responsive, Container, Divider, Card, Image, Icon } from 'semantic-ui-react';
 
 const description = [
@@ -10,7 +11,7 @@ const description = [
 class Tiles extends Component {
     render() {
         return(
-            <Container className='tileContent'>
+            <Container>
                 <Responsive
                     minWidth={768}
                     as={Container}
@@ -28,12 +29,12 @@ class Tiles extends Component {
                 
                 <Divider />
 
-                <Responsive as={Card.Group} minWidth={768} className='desktopCards'>
+                <Responsive as={Card.Group} minWidth={768} className='desktopCards' centered>
                     <Card className='desktopCard'>
                         <Card.Content>
                             <Image 
                                 floated='left' 
-                                size='small' 
+                                size='tiny' 
                                 src='https://i.ibb.co/9pJ2sRj/Screen-Shot-2019-03-29-at-6-40-19-PM.png' 
                             />
                             <Card.Header className='tileHeader'>WEB HOSTING <Icon name='right arrow' /></Card.Header>
@@ -44,7 +45,7 @@ class Tiles extends Component {
                         <Card.Content>
                             <Image 
                                 floated='left' 
-                                size='small' 
+                                size='tiny' 
                                 src='https://i.ibb.co/NN3bPkb/Screen-Shot-2019-03-29-at-6-40-38-PM.png' 
                             />
                             <Card.Header className='tileHeader'>RESELLERS <Icon name='right arrow' /></Card.Header>
@@ -55,7 +56,7 @@ class Tiles extends Component {
                         <Card.Content>
                             <Image 
                                 floated='left' 
-                                size='small' 
+                                size='tiny' 
                                 src='https://i.ibb.co/xLDMTPg/Screen-Shot-2019-03-29-at-6-40-57-PM.png' 
                             />
                             <Card.Header className='tileHeader'>VPS HOSTING <Icon name='right arrow' /></Card.Header>
@@ -66,7 +67,7 @@ class Tiles extends Component {
                         <Card.Content>
                             <Image 
                                 floated='left' 
-                                size='small' 
+                                size='tiny' 
                                 src='https://i.ibb.co/WDyzG2S/Screen-Shot-2019-03-29-at-6-41-21-PM.png' 
                             />
                             <Card.Header className='tileHeader'>CLOUD HOSTING <Icon name='right arrow' /></Card.Header>
@@ -74,9 +75,9 @@ class Tiles extends Component {
                         </Card.Content>
                     </Card>
                 </Responsive>
-
+                
                 <Responsive as={Card.Group} {...Responsive.onlyMobile} className='mobileCards'>
-                    <Card>
+                    <Card className='mobileCard'>
                         <Card.Content>
                             <Image
                                 floated='left'
@@ -87,7 +88,7 @@ class Tiles extends Component {
                             <Card.Meta>{description}</Card.Meta>
                         </Card.Content>
                     </Card>
-                    <Card>
+                    <Card className='mobileCard'>
                         <Card.Content>
                             <Image
                                 floated='left'
@@ -98,7 +99,7 @@ class Tiles extends Component {
                             <Card.Meta>{description}</Card.Meta>
                         </Card.Content>
                     </Card>
-                    <Card>
+                    <Card className='mobileCard'>
                         <Card.Content>
                             <Image
                                 floated='left'
@@ -109,7 +110,7 @@ class Tiles extends Component {
                             <Card.Meta>{description}</Card.Meta>
                         </Card.Content>
                     </Card>
-                    <Card>
+                    <Card className='mobileCard'>
                         <Card.Content>
                             <Image
                                 floated='left'

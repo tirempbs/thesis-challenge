@@ -1,86 +1,129 @@
 import React, { Component } from 'react';
-import './App.css';
-import { Responsive, Menu, Button, Dropdown } from 'semantic-ui-react';
+import './AppDesktop.css';
+import './AppMobile.css';
+import { Responsive, Menu, Button, Icon, Sidebar } from 'semantic-ui-react';
 
 class Nav extends Component {
-    state = {}
+    state = { visible: false }
 
+    handleSidebardClick = () => this.setState({ visible: !this.state.visible })
+    handleSidebarHide = () => this.setState({ visible: false })
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
     render() {
     const { activeItem } = this.state
+    const { visible } = this.state
 
         return (
-            <Menu inverted borderless>
-                <Responsive
-                    {...Responsive.onlyMobile}
-                    as={Dropdown}
-                    item
-                    icon='bars'
-                >
-                    <Responsive {...Responsive.onlyMobile} as={Dropdown.Menu}>
-                        <Responsive {...Responsive.onlyMobile} as={Dropdown.Item} content='MyWebNow' />
-                        <Responsive {...Responsive.onlyMobile} as={Dropdown.Item} content='Home' />
-                        <Responsive {...Responsive.onlyMobile} as={Dropdown.Item} content='Why Us' />
-                        <Responsive {...Responsive.onlyMobile} as={Dropdown.Item} content='Contact Us' />
-                        <Responsive {...Responsive.onlyMobile} as={Dropdown.Item} content='Login' />
-                        <Responsive {...Responsive.onlyMobile} as={Dropdown.Item} content='Support' />
-                    </Responsive>
-                </Responsive>
-                <Responsive
+            <>
+                <Responsive 
                     minWidth={768}
-                    as={Menu.Item}
-                    header
-                    className='myWebNow'
-                    content='MyWebNow'
-                    name='myWebNow'
-                    active={activeItem === 'myWebNow'}
-                    onClick={this.handleItemClick}
+                    as={Menu}
+                    secondary
+                    inverted
+                >
+                    <Menu.Item
+                        header
+                        className='myWebNow'
+                        content='MyWebNow'
+                        name='myWebNow'
+                        active={activeItem === 'myWebNow'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Menu position='right'>
+                        <Menu.Item
+                            content='Home'
+                            name='home'
+                            active={activeItem === 'home'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            content='Why Us'
+                            name='whyUs'
+                            active={activeItem === 'whyUs'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            content='Contact Us'
+                            name='contactUs'
+                            active={activeItem === 'contactUs'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            content='Login'
+                            name='login'
+                            active={activeItem === 'login'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Button
+                            content='Support'
+                            name='support'
+                            active={activeItem === 'support'}
+                            onClick={this.handleItemClick}
+                        />
+                    </Menu.Menu>
+                </Responsive>
+
+                <Responsive 
+                    {...Responsive.onlyMobile}
+                    as={Icon}
+                    name='bars'
+                    size='large'
+                    inverted
+                    className='bars'
+                    onClick={this.handleSidebardClick}
                 />
-                <Menu.Menu position='right'>
-                    <Responsive
-                        minWidth={768}
-                        as={Menu.Item}
+
+                <Sidebar
+                    as={Menu}
+                    animation='overlay'
+                    // icon='labeled'
+                    // inverted
+                    onHide={this.handleSidebarHide}
+                    vertical
+                    visible={visible}
+                    width='thin'
+                >
+                    <Menu.Item
+                        header
+                        className='myWebNow'
+                        content='MyWebNow'
+                        name='myWebNow'
+                        active={activeItem === 'myWebNow'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
                         content='Home'
                         name='home'
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
                     />
-                    <Responsive
-                        minWidth={768}
-                        as={Menu.Item}
+                    <Menu.Item
                         content='Why Us'
                         name='whyUs'
                         active={activeItem === 'whyUs'}
                         onClick={this.handleItemClick}
                     />
-                    <Responsive
-                        minWidth={768}
-                        as={Menu.Item}
+                    <Menu.Item
                         content='Contact Us'
                         name='contactUs'
                         active={activeItem === 'contactUs'}
                         onClick={this.handleItemClick}
                     />
-                    <Responsive
-                        minWidth={768}
-                        as={Menu.Item}
+                    <Menu.Item
                         content='Login'
                         name='login'
                         active={activeItem === 'login'}
                         onClick={this.handleItemClick}
                     />
-                    <Responsive
-                        compact
-                        minWidth={768}
-                        as={Button}
+                    <Menu.Item
                         content='Support'
                         name='support'
                         active={activeItem === 'support'}
                         onClick={this.handleItemClick}
                     />
-                </Menu.Menu>
-            </Menu>
+                </Sidebar>
+            </>
         );
     }
 }
