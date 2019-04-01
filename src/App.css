@@ -1,10 +1,50 @@
-.topSlash {
+div.ui.container {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .ui.container {
+        margin-left: 0em!important;
+        margin-right: 0em!important;
+    }
+}
+
+.desktopTopSlash {
     overflow: visible;
+    margin-bottom: 40vh;
     height: 100vh;
     background:
         linear-gradient(170deg, #7631D5 15%, transparent 15%),
         linear-gradient(170deg, #7448D7 55%, transparent 55%),
         linear-gradient(170deg, #746FDF 70%, transparent 70%)
+}
+
+.desktopBottomSlash {
+    overflow: visible;
+    height: 145vh;
+    background:
+        linear-gradient(0deg, #726FDF 30%, transparent 30%),
+        linear-gradient(-10deg, #F6F9FC 55%, transparent 55%)
+}
+
+.mobileTopSlash {
+    overflow: visible;
+    margin-bottom: 40vh;
+    height: 85vh;
+    background:
+        linear-gradient(170deg, #7631D5 15%, transparent 15%),
+        linear-gradient(170deg, #7448D7 45%, transparent 45%),
+        linear-gradient(170deg, #746FDF 60%, transparent 60%)
+}
+
+.mobileBottomSlash {
+    overflow: visible;
+    height: 200vh;
+    background:
+        linear-gradient(0deg, #726FDF 30%, transparent 30%),
+        linear-gradient(-10deg, #F6F9FC 55%, transparent 55%)
 }
 
 div.ui.borderless.menu {
@@ -29,8 +69,19 @@ button.ui.button {
     background-color: #726FDF;
 }
 
+.ui.button.contactButton {
+    color: gray;
+    background-color: white;
+    box-shadow: 2px 6px 10px lightgray;
+    margin-left: 1.5vw;
+}
+
 .topContent {
-    margin: 10vw
+    margin-top: 10vw;
+}
+
+.tileContent {
+    margin-top: -5vw;
 }
 
 .mint {
@@ -46,9 +97,9 @@ button.ui.button {
 
 .mobileHeaderText {
     color: white;
-    font-size: 6vw;
+    font-size: 8vw;
     font-weight: bold;
-    margin: 4vh;
+    margin: 3vh 2vh;
 }
 
 .desktopInput {
@@ -72,8 +123,8 @@ button.ui.button {
 
 .mobileMidText {
     color: white;
-    font-size: 3vw;
-    margin-top: 24vh;
+    font-size: 3.5vw;
+    margin-top: 12vh;
     margin-bottom: 2vh;
 }
 
@@ -87,14 +138,97 @@ button.ui.button {
     color: #767583;
     margin-top: 16vh;
     margin-bottom: 2vh;
-    font-size: 2vw;
 }
 
 .mobileBottomText {
     color: #767583;
     margin-top: 16vh;
     margin-bottom: 2vh;
+}
+
+.desktopTileHeader {
+    color: black;
+    font-size: 2vw;
+    margin-bottom: 1vh;
+}
+
+.mobileTileHeader {
+    color: black;
+    font-size: 6vw;
+    margin-bottom: 4vh;
+    margin-top: -18vh;
+}
+
+div.ui.divider:not(.vertical):not(.horizontal) {
+    border-top: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 5vw;
+}
+
+div.ui.cards.desktopCards {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+div.ui.cards.mobileCards {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+div.ui.card.desktopCard{
+    width: 38.8vw;
+}
+
+img.ui.small.left.floated.image {
+    margin-left: -14px;
+}
+
+.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+    background: #FCFCFD;
+}
+
+div.ui.card.desktopBottomSlashCard{
+    width: 38.8vw;
+    margin-top:15vh;
+    background: transparent;
+    box-shadow: none;
+}
+
+.desktopReadyText {
+    color: #746FDF;
     font-size: 2vw;
 }
 
+.desktopContactText {
+    color: #7631D5;
+    font-size: 2vw;
+    margin-top: 1vw;
+}
+
+div.ui.card.mobileBottomSlashCard{
+    width: 80vw;
+    margin:15vh;
+    background: transparent;
+    box-shadow: none;
+}
+
+.mobileReadyText {
+    color: #746FDF;
+    font-size: 4vw;
+}
+
+.mobileContactText {
+    color: #7631D5;
+    font-size: 4vw;
+    margin-top: 4vw;
+}
 
